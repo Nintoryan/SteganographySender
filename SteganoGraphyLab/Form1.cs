@@ -372,7 +372,7 @@ namespace SteganoGraphyLab
             }
             SourceIPAddress = BitConverter.ToUInt32(IPAddress.Parse(Tools.GetLocalIPAddress()).GetAddressBytes(), 0);
             DestinationIPAddress = BitConverter.ToUInt32(IPAddress.Parse(destIP).GetAddressBytes(), 0);
-            Identification = Convert.ToInt32(hiddenMessage);
+            Identification = Convert.ToInt32(hiddenMessage,2);
         }
         public void SetHiddenMessage(string hiddenMessage)
         {
